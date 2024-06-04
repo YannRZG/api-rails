@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
          has_many :articles
          has_many :comments
+         has_many :photos, dependent: :destroy
     def jwt_payload
       super
     end
